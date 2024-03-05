@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 require '..\vendor\autoload.php';
 use Aws\S3\S3Client;
+use App\Classes\HashControllClass;
+
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -24,5 +26,14 @@ class MainController extends Controller
             echo $bucket['Name'] . "\n";
         }
 
+        $hashControllClass = new HashControllClass();
+
+        $hash = $hashControllClass->Get3HashSum('https://storage.yandexcloud.net/storagecs1/asd.docx');
+
+        $hashsss = $hashControllClass->Get3HashSum('C:\Users\cosmosanet\Desktop\Диплом\123.docx');
+
+        dd($hash, $hashsss);
+     
+        
     }
 }
