@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+    'yandex_api_key' => env('YANDEX_API_KEY', false),
+    'yandex_api_secret_key' => env('YANDEX_API_SECRET_KEY', false),
     /*
     |--------------------------------------------------------------------------
     | Application Name
